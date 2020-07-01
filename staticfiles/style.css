@@ -1,0 +1,113 @@
+
+body {
+  font-size: 16px;
+  color: #fff;
+  background-color: #61122f;
+  font-family: 'Oxygen', sans-serif;
+}
+/* LOADING AREA */
+#loading-area {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+/* END LOADING AREA */
+/* HEADER */
+#navbar {
+  background-color: goldenrod;
+}
+#title {
+  color: #557c3e;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+#navbar-hover:hover {
+  text-decoration: none;
+}
+#phone a span{
+  margin-top: 5px;
+  font-size: x-large;
+  color: #61122f;
+}
+#phone a{ /* Phone number */
+  text-align: right;
+  padding-bottom: 1px;
+  text-decoration: none;
+}
+#phone div { /* We Deliver */
+  color: #557c3e;
+  text-align: right;
+  padding-right: 15px;
+}
+.glyphicon {
+  color: #61122f;
+  font-size: 30px;
+}
+div ul li a {
+  color: #61122f;
+}
+/* END HEADER */
+/* HOME-TILE */
+#menu-tile, #specials-tile, #map-tile {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+}
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+#menu-tile {
+  background: url('/static/images/menu-tile.jpg') no-repeat;
+  background-position: center;
+}
+#specials-tile {
+  background: url('/static/images/specials-tile.jpg') no-repeat;
+  background-position: center;
+}
+#menu-tile span, #specials-tile span, #map-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: 0.8;
+}
+/* END HOME-TILE */
+/* FOOTER */
+.panel-footer {
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #222;
+  border-top: 0;
+}
+.panel-footer div.row {
+  margin-bottom: 35px;
+}
+#hours, #address {
+  line-height: 2;
+}
+#hours > span, #address > span {
+  font-size: 1.3em;
+}
+#address p {
+  color: #557c3e;
+  font-size: .8em;
+  line-height: 1.8;
+}
+#testimonials {
+  font-style: italic;
+}
+#testimonials p:nth-child(2) {
+  margin-top: 25px;
+}
+/* END FOOTER */
+
+

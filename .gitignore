@@ -1,0 +1,4 @@
+.idea/
+coursera_extension/__pycache__/
+db.sqlite3
+venv/
