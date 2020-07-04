@@ -1,5 +1,9 @@
 from django.shortcuts import render,HttpResponse
 from .models import *
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from.models import Menu
+from .Serializers import MenuSerializer, CategorySerializer
 
 
 def home(request):
@@ -10,3 +14,19 @@ def home(request):
         url = banners[0].banner.url
     context = {"banner": url}
     return render(request,template_name='index.html', context=context)
+
+
+@api_view(['GET'])
+def list_menu_category(request,menu):
+    if menu == 'category':
+        c = Category.objects.all()
+        sd = CategorySerializer(c.all(), many=True)
+        sd = sd.data
+        return Response(sd)
+
+
+@api_view(['GET'])
+def list_items(request, id):
+    i = Menu.objects.filter(category=Category.objects.get(id=id))
+    sd = MenuSerializer(i.all(), many=True).data
+    return Response(sd)
