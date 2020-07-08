@@ -27,3 +27,13 @@ class Menu(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Form(models.Model):
+    email = models.EmailField(max_length=512,null=True,blank=True)
+    function = models.CharField(max_length=512,null=True,blank=True)
+    date = models.CharField(max_length=512,null=True,blank=True)
+    message = models.CharField(max_length=512,null=True,blank=True)
+
+    def __str__(self):
+        return self.email

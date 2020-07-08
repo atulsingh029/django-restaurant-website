@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect
 from .models import *
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -30,3 +30,10 @@ def list_items(request, id):
     i = Menu.objects.filter(category=Category.objects.get(id=id))
     sd = MenuSerializer(i.all(), many=True).data
     return Response(sd)
+
+
+def submit_form(request):
+    data = request.POST
+    form = Form(email=data['email'],function=data['function'],date=data['date'],message=data['message'])
+    form.save()
+    return redirect('/')

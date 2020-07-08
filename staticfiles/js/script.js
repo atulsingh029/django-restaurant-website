@@ -1,4 +1,4 @@
-
+const csrftoken = $("[name=csrfmiddlewaretoken]").val();
 function loadMenu(){
     let load = document.getElementById("loading-area");
     load.innerHTML = "<img src = \"/static/images/ajax-loader.gif\" style='display: block;margin-left: auto;margin-right: auto;'>";

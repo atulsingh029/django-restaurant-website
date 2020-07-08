@@ -22,7 +22,8 @@ from coursera_extension import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('restaurant.urls'))
+    path('', include('restaurant.urls')),
+    path('blog/',include('blog.urls')),
 ]
 
 

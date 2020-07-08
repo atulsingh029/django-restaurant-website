@@ -42,9 +42,9 @@
               <a href="#" onclick="loadAwards()">
                 <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Awards</a>
             </li>
-                <li>
-              <a href="/blog">
-                <span class="glyphicon glyphicon-pencil"></span><br class="hidden-xs"> Blog</a>
+            <li>
+              <a href="/">
+                <span class="glyphicon glyphicon-home"></span><br class="hidden-xs"> Home</a>
             </li>
             <li id="phone" class="hidden-xs">
               <a href="tel:410-602-5008">
@@ -55,75 +55,13 @@
         </nav>
     </div>
 </header>
-
   <div id="loading-area">
       <!-- loading area -->
   </div>
   <div id="main-content" class="container">
-      <div class="jumbotron jumbotron-fluid">
-          <div class="container">
-            <h1 class="display-4" style="color: #61122f">Check Out Our Food Blog</h1>
-            <p class="lead" style="color: black">We write blogs on different food items, mention cooking procedure and also guide on food items you must try at tourist spots.</p>
-            <a href="/blog" class="btn btn-primary">Blog</a>
-          </div>
-        </div>
-      <!--Ajax based dynamic content goes here-->
-      <!-- Page Initials -->
-      <img src="{{ banner }}" class="img-fluid my-4 img-rounded" alt="Responsive image">
-      <!--End Page Initials -->
-      <!-- Home Tiles -->
-      <div id="" class="row">
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <a href="#" onclick="loadMenu()">
-              <div id="menu-tile"><span>menu</span></div>
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <a href="#" onclick="loadSpecial()">
-              <div id="specials-tile"><span>specials</span></div>
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-12 col-xs-12">
-            <a href="https://www.google.com/maps/place/David+Chu's+China+Bistro/@39.3635874,-76.7138622,17z/data=!4m6!1m3!3m2!1s0x89c81a14e7817803:0xab20a0e99daa17ea!2sDavid+Chu's+China+Bistro!3m1!1s0x89c81a14e7817803:0xab20a0e99daa17ea"
-              target="_blank">
-              <div id="map-tile">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.675372390488!2d-76.71386218529199!3d39.3635874269356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81a14e7817803%3A0xab20a0e99daa17ea!2sDavid+Chu&#39;s+China+Bistro!5e0!3m2!1sen!2sus!4v1452824864156"
-                  width="100%" height="250" style="border:0" allowfullscreen></iframe>
-                <span>map</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      <div id="" class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12 m-auto">
+      {% block container %}
+    {% endblock %}
 
-              <div id="contact" class="p-5">
-                  <form method="post" id = "form" action="/api/form/">
-                      {% csrf_token %}
-
-                    <label for="Email">Email address</label>
-                    <input name='email' type="email" class="form-control mb-2" id="Email" aria-describedby="emailHelp" required>
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-
-
-                    <label for="Function">Function Name</label>
-                    <input name="function" type="text" class="form-control mb-2" id="Function" required>
-
-
-                    <label for="Input">Date</label>
-                    <input name="date" type="date" class="form-control mb-2" id="Input" required>
-
-
-                    <label for="Input2">Message, if any</label>
-                    <input name="message" type="text" class="form-control mb-2" id="Input2">
-
-                  <button id="btn-s" type="submit" class="btn btn-primary m-2" >Submit</button>
-                </form>
-                  <span>We Offer Catering For Parties!</span></div>
-          </div>
-      </div>
-      <!-- End Home Tiles -->
   </div>
 
   <footer class="panel-footer">
