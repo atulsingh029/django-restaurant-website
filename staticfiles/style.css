@@ -219,8 +219,9 @@ h3.menu-item-title {
 }
 
 .head {
-    color: blue;
+    color: darkgoldenrod;
     font-weight: 600;
+  font-size: x-large;
 }
 
 a:hover {
