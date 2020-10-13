@@ -17,7 +17,7 @@
             <div class="navbar-header">
                 <img src="{% static 'images/restaurant-logo_large.png' %}"  class="d-none d-lg-inline-block align-top my-1" alt="" loading="lazy">
             </div>
-          <div class="navbar-brand ml-2">
+          <div class="navbar-brand ml-1">
               <a href="/" id="navbar-hover"><span id="title">DAVID CHU'S BISTRO</span></a>
               <p>
                   <img src="{% static 'images/star-k-logo.png' %}" alt="Kosher certification">
@@ -29,7 +29,7 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <ul id="nav-list" class="nav navbar-nav">
             <li id="navMenuButton">
               <a href="#" onclick="loadMenu()">
                 <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
@@ -46,7 +46,7 @@
               <a href="/blog">
                 <span class="glyphicon glyphicon-pencil"></span><br class="hidden-xs"> Blog</a>
             </li>
-            <li id="phone" class="hidden-xs">
+            <li id="phone">
               <a href="tel:410-602-5008">
                 <span>410-602-5008</span></a><div>* We Deliver</div>
             </li>
@@ -96,12 +96,11 @@
           </div>
         </div>
       <div id="" class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12 m-auto">
+          <div class="col m-auto">
 
               <div id="contact" class="p-5">
                   <form method="post" id = "form" action="/api/form/">
                       {% csrf_token %}
-
                     <label for="Email">Email address</label>
                     <input name='email' type="email" class="form-control mb-2" id="Email" aria-describedby="emailHelp" required>
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
